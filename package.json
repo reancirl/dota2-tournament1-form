@@ -5,8 +5,5 @@
   "description": "Bethel Hub Dota 2 tournament registration form",
   "scripts": {
     "dev": "node server.js"
-  },
-  "dependencies": {
-    "googleapis": "^144.0.0"
   }
 }
