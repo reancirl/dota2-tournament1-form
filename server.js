@@ -28,7 +28,7 @@ const MIME = { ".html": "text/html", ".jpg": "image/jpeg", ".jpeg": "image/jpeg"
 
 const server = http.createServer((req, res) => {
   // ---- Handle a registration submission ----
-  if (req.method === "POST" && req.url === "/register") {
+  if (req.method === "POST" && (req.url === "/api/register" || req.url === "/register")) {
     let body = "";
     req.on("data", (chunk) => {
       body += chunk;

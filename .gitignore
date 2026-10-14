@@ -1,0 +1,5 @@
+node_modules/
+registrations.csv
+.vercel
+.env
+.env*.local
