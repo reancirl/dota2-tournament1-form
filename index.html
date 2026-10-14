@@ -14,6 +14,7 @@
     --cyan-soft: #7df0ff;
     --red: #ff2d46;
     --gold: #ffcb3d;
+    --gcash: #0a6cff;
     --text: #e8f4ff;
     --muted: #8fa6c0;
     --field-bg: rgba(5, 10, 20, 0.6);
@@ -36,178 +37,148 @@
     padding: 28px 16px 64px;
   }
 
-  .wrap { max-width: 860px; margin: 0 auto; }
+  .wrap { max-width: 720px; margin: 0 auto; }
 
   /* ---------- Header ---------- */
-  .hero {
-    text-align: center;
-    padding: 24px 16px 8px;
-  }
+  .hero { text-align: center; padding: 20px 16px 8px; }
   .brand {
-    font-size: 15px;
-    letter-spacing: 6px;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    font-size: 15px; letter-spacing: 6px; color: var(--muted);
+    text-transform: uppercase; margin-bottom: 10px;
   }
   .brand b { color: var(--cyan); font-weight: 800; }
   .title {
-    font-size: clamp(34px, 7vw, 58px);
-    font-weight: 900;
-    line-height: 0.95;
-    letter-spacing: 1px;
-    margin: 4px 0;
-    text-transform: uppercase;
+    font-size: clamp(32px, 7vw, 54px);
+    font-weight: 900; line-height: 0.95; letter-spacing: 1px;
+    margin: 4px 0; text-transform: uppercase;
   }
   .title .grey { color: #dfe8f2; text-shadow: 0 0 26px rgba(223, 232, 242, 0.25); }
   .title .red  { color: var(--red); }
   .subtitle {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    display: inline-block; margin-top: 10px;
+    font-size: 14px; letter-spacing: 3px; text-transform: uppercase;
     color: var(--cyan-soft);
     background: linear-gradient(90deg, rgba(255,45,70,0.18), rgba(39,230,255,0.18));
     border: 1px solid var(--panel-brd);
-    padding: 7px 18px;
-    border-radius: 999px;
+    padding: 7px 18px; border-radius: 999px;
   }
 
   /* ---------- Info chips ---------- */
   .info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin: 26px 0 8px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; margin: 24px 0 8px;
   }
   .chip {
-    background: var(--panel);
-    border: 1px solid var(--panel-brd);
-    border-radius: 12px;
-    padding: 12px 14px;
-    text-align: center;
+    background: var(--panel); border: 1px solid var(--panel-brd);
+    border-radius: 12px; padding: 12px 14px; text-align: center;
     backdrop-filter: blur(4px);
   }
   .chip .k { font-size: 11px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
   .chip .v { font-size: 16px; font-weight: 800; color: var(--cyan); margin-top: 3px; }
 
-  /* ---------- Form card ---------- */
-  form {
-    margin-top: 22px;
-    background: var(--panel);
-    border: 1px solid var(--panel-brd);
-    border-radius: 16px;
-    padding: 24px 22px 28px;
+  /* ---------- Cards ---------- */
+  .card {
+    margin-top: 20px;
+    background: var(--panel); border: 1px solid var(--panel-brd);
+    border-radius: 16px; padding: 24px 22px 26px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255,255,255,0.03);
     backdrop-filter: blur(6px);
   }
 
-  .section-head {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 4px 0 18px;
-  }
-  .section-head:not(:first-of-type) { margin-top: 32px; }
+  .section-head { display: flex; align-items: center; gap: 12px; margin: 2px 0 18px; }
   .section-head .num {
-    flex: 0 0 auto;
-    width: 30px; height: 30px;
-    display: grid; place-items: center;
-    border-radius: 8px;
-    font-weight: 900; font-size: 15px;
-    color: var(--bg);
+    flex: 0 0 auto; width: 30px; height: 30px;
+    display: grid; place-items: center; border-radius: 8px;
+    font-weight: 900; font-size: 15px; color: var(--bg);
     background: linear-gradient(135deg, var(--cyan), var(--cyan-soft));
     box-shadow: 0 0 18px rgba(39, 230, 255, 0.4);
   }
-  .section-head h2 {
-    font-size: 17px; margin: 0;
-    text-transform: uppercase; letter-spacing: 1.5px;
-  }
-  .section-head .hint { font-size: 12px; color: var(--muted); margin-left: auto; }
+  .section-head h2 { font-size: 17px; margin: 0; text-transform: uppercase; letter-spacing: 1.5px; }
 
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  @media (max-width: 560px) { .grid-2 { grid-template-columns: 1fr; } }
+  @media (max-width: 520px) { .grid-2 { grid-template-columns: 1fr; } }
 
   .field { margin-bottom: 14px; }
   label {
-    display: block;
-    font-size: 12.5px;
-    letter-spacing: 0.5px;
-    color: var(--cyan-soft);
-    margin-bottom: 6px;
-    font-weight: 600;
+    display: block; font-size: 12.5px; letter-spacing: 0.5px;
+    color: var(--cyan-soft); margin-bottom: 6px; font-weight: 600;
   }
   label .req { color: var(--red); }
 
-  input, select, textarea {
-    width: 100%;
-    background: var(--field-bg);
-    border: 1px solid var(--field-brd);
-    border-radius: 9px;
-    padding: 11px 13px;
-    color: var(--text);
-    font-size: 14.5px;
-    font-family: inherit;
-    transition: border-color 0.15s, box-shadow 0.15s;
+  input, textarea {
+    width: 100%; background: var(--field-bg);
+    border: 1px solid var(--field-brd); border-radius: 9px;
+    padding: 11px 13px; color: var(--text); font-size: 14.5px;
+    font-family: inherit; transition: border-color 0.15s, box-shadow 0.15s;
   }
   input::placeholder, textarea::placeholder { color: #5e738c; }
-  input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: var(--cyan);
+  input:focus, textarea:focus {
+    outline: none; border-color: var(--cyan);
     box-shadow: 0 0 0 3px rgba(39, 230, 255, 0.15);
   }
-  select { appearance: none; cursor: pointer; }
-  textarea { resize: vertical; min-height: 70px; }
 
-  /* ---------- Player rows ---------- */
-  .player {
-    border: 1px solid var(--field-brd);
-    border-radius: 12px;
-    padding: 14px;
-    margin-bottom: 12px;
-    background: rgba(8, 14, 26, 0.5);
+  /* ---------- GCash payment block ---------- */
+  .gcash-box {
+    background: linear-gradient(180deg, rgba(10,108,255,0.10), rgba(10,108,255,0.03));
+    border: 1px solid rgba(10, 108, 255, 0.4);
+    border-radius: 14px; padding: 20px; text-align: center;
   }
-  .player-top {
-    display: flex; align-items: center; gap: 10px;
-    margin-bottom: 12px;
+  .gcash-head {
+    font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    color: #6fb0ff; font-weight: 800; margin-bottom: 4px;
   }
-  .player-badge {
-    font-size: 11px; font-weight: 800; letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 4px 10px; border-radius: 6px;
-    color: var(--bg);
-    background: linear-gradient(135deg, var(--cyan), var(--cyan-soft));
+  .gcash-amt { font-size: 30px; font-weight: 900; color: #fff; margin-bottom: 14px; }
+  .gcash-amt span { color: var(--cyan); }
+  .qr-frame {
+    display: inline-block; background: #fff; padding: 10px;
+    border-radius: 12px; box-shadow: 0 10px 30px rgba(10, 108, 255, 0.3);
   }
-  .player.captain .player-badge { background: linear-gradient(135deg, var(--gold), #ffe08a); }
-  .player-role { font-size: 12px; color: var(--muted); }
+  .qr-frame img { display: block; width: 240px; max-width: 70vw; height: auto; border-radius: 6px; }
+  .gcash-name { margin-top: 12px; font-size: 14px; color: var(--text); }
+  .gcash-name b { color: #6fb0ff; }
+  .gcash-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  /* ---------- Steps / receipt instructions ---------- */
+  .steps { counter-reset: step; margin: 4px 0 0; padding: 0; list-style: none; }
+  .steps li {
+    position: relative; padding: 12px 0 12px 44px;
+    border-bottom: 1px solid rgba(90,130,170,0.12); line-height: 1.55; font-size: 14px;
+  }
+  .steps li:last-child { border-bottom: none; }
+  .steps li::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; left: 0; top: 11px;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: grid; place-items: center; font-weight: 800; font-size: 13px;
+    color: var(--bg); background: linear-gradient(135deg, var(--cyan), var(--cyan-soft));
+  }
+  .steps b { color: var(--cyan-soft); }
+
+  .fb-btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    margin-top: 14px; padding: 13px 22px;
+    background: #1877f2; color: #fff; font-weight: 800; font-size: 14.5px;
+    text-decoration: none; border-radius: 10px; letter-spacing: 0.3px;
+    box-shadow: 0 8px 24px rgba(24, 119, 242, 0.35);
+    transition: transform 0.12s;
+  }
+  .fb-btn:hover { transform: translateY(-2px); }
+  .fb-btn svg { width: 20px; height: 20px; fill: #fff; }
 
   /* ---------- Agreement ---------- */
   .agree {
     display: flex; gap: 11px; align-items: flex-start;
-    background: rgba(255, 45, 70, 0.06);
-    border: 1px solid rgba(255, 45, 70, 0.25);
-    border-radius: 10px;
-    padding: 13px 15px;
-    margin-bottom: 12px;
+    background: rgba(255, 45, 70, 0.06); border: 1px solid rgba(255, 45, 70, 0.25);
+    border-radius: 10px; padding: 13px 15px; margin-bottom: 12px;
   }
   .agree input { width: auto; margin-top: 2px; flex: 0 0 auto; accent-color: var(--red); transform: scale(1.2); }
   .agree label { color: var(--text); margin: 0; font-weight: 500; line-height: 1.5; }
 
   /* ---------- Submit ---------- */
-  .submit-row { margin-top: 26px; text-align: center; }
   button[type=submit] {
-    width: 100%;
-    padding: 16px;
-    font-size: 17px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #fff;
-    background: linear-gradient(135deg, var(--red), #ff5a6e);
-    border: none;
-    border-radius: 11px;
-    cursor: pointer;
+    width: 100%; margin-top: 10px; padding: 16px;
+    font-size: 17px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase;
+    color: #fff; background: linear-gradient(135deg, var(--red), #ff5a6e);
+    border: none; border-radius: 11px; cursor: pointer;
     box-shadow: 0 10px 30px rgba(255, 45, 70, 0.35);
     transition: transform 0.12s, box-shadow 0.12s;
   }
@@ -217,44 +188,20 @@
   .note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 14px; line-height: 1.6; }
 
   .footer-quote {
-    text-align: center;
-    font-style: italic;
-    color: var(--muted);
-    font-size: 13px;
-    margin: 34px auto 0;
-    max-width: 560px;
-    line-height: 1.6;
+    text-align: center; font-style: italic; color: var(--muted);
+    font-size: 13px; margin: 32px auto 0; max-width: 560px; line-height: 1.6;
   }
 
   /* ---------- Success ---------- */
-  .success {
-    display: none;
-    text-align: center;
-    padding: 40px 20px;
-  }
+  .success { display: none; text-align: center; }
   .success.show { display: block; }
   .success .check {
-    width: 72px; height: 72px; margin: 0 auto 18px;
-    border-radius: 50%;
-    display: grid; place-items: center;
-    font-size: 38px;
-    background: rgba(53, 224, 138, 0.12);
-    border: 2px solid var(--ok);
-    color: var(--ok);
+    width: 72px; height: 72px; margin: 4px auto 18px; border-radius: 50%;
+    display: grid; place-items: center; font-size: 38px;
+    background: rgba(53, 224, 138, 0.12); border: 2px solid var(--ok); color: var(--ok);
   }
   .success h2 { font-size: 24px; margin: 0 0 8px; text-transform: uppercase; }
   .success p { color: var(--muted); line-height: 1.6; }
-  .success .summary {
-    text-align: left;
-    background: var(--field-bg);
-    border: 1px solid var(--field-brd);
-    border-radius: 10px;
-    padding: 16px;
-    margin: 20px auto 0;
-    max-width: 440px;
-    font-size: 14px;
-  }
-  .success .summary b { color: var(--cyan); }
 </style>
 </head>
 <body>
@@ -270,18 +217,13 @@
     <div class="chip"><div class="k">Date</div><div class="v">Oct 23, 2026</div></div>
     <div class="chip"><div class="k">Starts</div><div class="v">1:00 PM</div></div>
     <div class="chip"><div class="k">Entry Fee</div><div class="v">₱300 / team</div></div>
-    <div class="chip"><div class="k">Team Size</div><div class="v">6 Players</div></div>
     <div class="chip"><div class="k">Slots</div><div class="v">8 Teams Only</div></div>
-    <div class="chip"><div class="k">Format</div><div class="v">Best of 3</div></div>
   </div>
 
-  <form id="regForm" novalidate>
+  <form id="regForm" class="card" novalidate>
 
     <!-- Team -->
-    <div class="section-head">
-      <span class="num">1</span>
-      <h2>Team Details</h2>
-    </div>
+    <div class="section-head"><span class="num">1</span><h2>Team Details</h2></div>
 
     <div class="field">
       <label>Team Name <span class="req">*</span></label>
@@ -299,76 +241,50 @@
       </div>
     </div>
 
-    <div class="field">
-      <label>Facebook Profile / Page Link <span class="req">*</span></label>
-      <input type="text" name="fbLink" placeholder="https://facebook.com/..." required />
-    </div>
-
-    <!-- Roster -->
-    <div class="section-head">
-      <span class="num">2</span>
-      <h2>Player Roster</h2>
-      <span class="hint">6 players required</span>
-    </div>
-
-    <div id="players"></div>
-
     <!-- Payment -->
-    <div class="section-head">
-      <span class="num">3</span>
-      <h2>Registration Fee</h2>
+    <div class="section-head" style="margin-top:28px"><span class="num">2</span><h2>Pay via GCash</h2></div>
+
+    <div class="gcash-box">
+      <div class="gcash-head">Scan to Pay</div>
+      <div class="gcash-amt"><span>₱</span>300</div>
+      <div class="qr-frame"><img src="gcash-qr.jpg" alt="GCash InstaPay QR code" /></div>
+      <div class="gcash-name"><b>AL*****R G.</b></div>
+      <div class="gcash-sub">+63 926 405 •••• · Transfer fees may apply</div>
     </div>
 
-    <div class="field">
-      <label>Payment Method <span class="req">*</span></label>
-      <select name="payment" required>
-        <option value="" disabled selected>Select how you'll pay the ₱300</option>
-        <option>GCash</option>
-        <option>Cash (pay at the shop)</option>
-        <option>Maya</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label>Payment Reference No. <span style="color:var(--muted)">(if paid online)</span></label>
-      <input type="text" name="paymentRef" placeholder="GCash / Maya reference number" />
-    </div>
-
-    <!-- Agreements -->
-    <div class="section-head">
-      <span class="num">4</span>
-      <h2>Confirmation</h2>
-    </div>
+    <!-- Confirmation -->
+    <div class="section-head" style="margin-top:28px"><span class="num">3</span><h2>Confirm</h2></div>
 
     <div class="agree">
       <input type="checkbox" name="agreeFee" id="agreeFee" required />
-      <label for="agreeFee">We understand the ₱300 registration fee per team is <b>non-refundable</b> and must be settled to confirm our slot.</label>
+      <label for="agreeFee">I have paid the <b>₱300</b> registration fee via the GCash QR above. (Non-refundable.)</label>
     </div>
     <div class="agree">
       <input type="checkbox" name="agreePC" id="agreePC" required />
-      <label for="agreePC">We agree that each player is responsible for paying their own <b>PC rental</b> fees during the tournament.</label>
-    </div>
-    <div class="agree">
-      <input type="checkbox" name="agreeRules" id="agreeRules" required />
-      <label for="agreeRules">Our team agrees to the <b>Open Category</b>, 6-player limit, and Best of 3 (BO3) format. First 8 teams only.</label>
+      <label for="agreePC">Our team will pay our own <b>PC rental</b> fees, and we agree to the Open Category, 6-player limit, and BO3 format.</label>
     </div>
 
-    <div class="submit-row">
-      <button type="submit">Register Our Team ⚔️</button>
-      <div class="note">
-        Only the first <b>8 teams</b> who complete registration and payment are confirmed.<br />
-        Location: Back of 7/11 Lugait, near Petron.
-      </div>
-    </div>
-
+    <button type="submit">Submit Registration ⚔️</button>
+    <div class="note">Only the first <b>8 teams</b> who pay are confirmed. Location: Back of 7/11 Lugait, near Petron.</div>
   </form>
 
   <!-- Success panel -->
-  <div class="success" id="success">
+  <div class="success card" id="success">
     <div class="check">✓</div>
-    <h2>Registration Submitted!</h2>
-    <p>Your team is in. We'll confirm your slot once payment is verified.<br />Keep an eye on your Facebook messages.</p>
-    <div class="summary" id="summary"></div>
+    <h2>Almost Done!</h2>
+    <p>Your registration is saved. <b style="color:var(--text)">One last step</b> to lock in your slot:</p>
+
+    <ol class="steps" style="text-align:left; margin-top:18px">
+      <li>Make sure you've <b>paid ₱300</b> via the GCash QR and <b>screenshot your receipt</b>.</li>
+      <li>Message the <b>Bethel Hub</b> Facebook page and send your <b>GCash receipt screenshot</b>.</li>
+      <li>Wait for confirmation of your slot. First 8 paid teams only!</li>
+    </ol>
+
+    <a class="fb-btn" href="https://www.facebook.com/profile.php?id=61587294471105" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.25h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+      Send Receipt to Bethel Hub
+    </a>
+    <p style="font-size:12px; margin-top:16px">Your slot is only confirmed once Bethel Hub verifies your GCash receipt.</p>
   </div>
 
   <div class="footer-quote">
@@ -378,69 +294,35 @@
 </div>
 
 <script>
-  // ---- Build 6 player rows (1 captain + 5 members) ----
-  const playersWrap = document.getElementById('players');
-  for (let i = 1; i <= 6; i++) {
-    const isCap = i === 1;
-    const div = document.createElement('div');
-    div.className = 'player' + (isCap ? ' captain' : '');
-    div.innerHTML = `
-      <div class="player-top">
-        <span class="player-badge">Player ${i}</span>
-        <span class="player-role">${isCap ? 'Team Captain' : 'Member'}</span>
-      </div>
-      <div class="grid-2">
-        <div class="field" style="margin-bottom:0">
-          <label>In-Game Name (IGN) ${isCap ? '' : '<span class="req">*</span>'}</label>
-          <input type="text" name="p${i}_ign" placeholder="IGN" ${isCap ? '' : 'required'} />
-        </div>
-        <div class="field" style="margin-bottom:0">
-          <label>Dota 2 Friend ID ${isCap ? '' : '<span class="req">*</span>'}</label>
-          <input type="text" name="p${i}_id" placeholder="e.g. 123456789" ${isCap ? '' : 'required'} />
-        </div>
-      </div>`;
-    playersWrap.appendChild(div);
-  }
-
-  // ---- Submit handling ----
   const form = document.getElementById('regForm');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  const submitBtn = form.querySelector('button[type=submit]');
 
-    if (!form.checkValidity()) {
-      form.reportValidity();
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting…';
+
+    try {
+      const res = await fetch('/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('Server error');
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Registration ⚔️';
+      alert('Could not submit — please try again, or message Bethel Hub directly.');
       return;
     }
-
-    const data = new FormData(form);
-    const teamName = data.get('teamName');
-    const captain = data.get('captainName');
-    const payment = data.get('payment');
-
-    // Collect roster
-    let roster = '';
-    for (let i = 1; i <= 6; i++) {
-      const ign = data.get('p' + i + '_ign');
-      if (ign) roster += `<div>${i}. ${ign} <span style="color:var(--muted)">(${data.get('p' + i + '_id') || '—'})</span></div>`;
-    }
-
-    document.getElementById('summary').innerHTML =
-      `<div><b>Team:</b> ${teamName}</div>
-       <div><b>Captain:</b> ${captain}</div>
-       <div><b>Payment:</b> ${payment}</div>
-       <div style="margin-top:10px"><b>Roster</b></div>${roster}`;
-
-    // Save locally so nothing is lost before a backend exists
-    try {
-      const all = JSON.parse(localStorage.getItem('bethelhub_registrations') || '[]');
-      all.push(Object.fromEntries(data.entries()));
-      localStorage.setItem('bethelhub_registrations', JSON.stringify(all));
-    } catch (err) { /* ignore storage errors */ }
 
     form.style.display = 'none';
     const s = document.getElementById('success');
     s.classList.add('show');
-    s.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    s.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 </script>
 </body>
